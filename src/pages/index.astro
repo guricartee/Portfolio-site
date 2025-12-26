@@ -2,6 +2,7 @@
 import Layout from '~/layouts/PageLayout.astro';
 import Hero from '~/components/widgets/Hero.astro';
 import Features2 from '~/components/widgets/Features2.astro';
+import Content from '~/components/widgets/Content.astro'; // ESTA LINHA RESOLVE O ERRO ATUAL
 
 const metadata = {
   title: 'Gustavo Ricarte',
@@ -22,16 +23,15 @@ const metadata = {
     image={{
       src: '~/assets/images/perfil.png',
       alt: 'Foto de Gustavo Ricarte',
-      // mx-auto centraliza; h-64 e w-64 garantem que o círculo seja perfeito e não uma oval
-      class: 'mx-auto rounded-full w-64 h-64 object-cover border-4 border-[#800020] shadow-xl'
+      // rounded-lg e object-contain para a foto aparecer INTEIRA
+      class: 'mx-auto rounded-lg w-full max-w-md h-auto object-contain border-4 border-[#800020] shadow-2xl bg-white/50'
     }}
   >
     <Fragment slot="title">
-      {/* tracking-normal impede as letras de ficarem grudadas. text-lg ajusta o tamanho. */}
-      <span class="text-lg font-light tracking-normal leading-relaxed text-gray-500 dark:text-slate-400 block mb-2">
+      <span class="text-4xl font-light tracking-widest leading-loose text-gray-500 dark:text-slate-400 block mb-4">
         Olá, meu nome é:
       </span>
-      <span class="text-[#800020] dark:text-[#A52A2A] font-bold tracking-normal">
+      <span class="text-[#800020] dark:text-[#A52A2A] font-bold text-6xl tracking-normal">
         Gustavo Ricarte
       </span>
     </Fragment>
@@ -48,7 +48,7 @@ const metadata = {
     tagline="Sobre Mim"
     title="Quem sou eu"
     image={{
-      src: '~/assets/images/foto-sobre.png', // Certifique-se de colocar sua foto com este nome na pasta
+      src: '~/assets/images/perfil.png',
       alt: 'Imagem de Perfil',
     }}
   >
@@ -56,23 +56,7 @@ const metadata = {
       <div class="text-lg text-muted dark:text-slate-400 text-justify">
         Olá, meu nome é Gustavo Ricarte, nascido no estado de São Paulo. Sou estudante de Análise e Desenvolvimento de Sistemas na 
         Universidade São Judas Tadeu. Atualmente, atuo como desenvolvedor Back-end com foco em Java e estou expandindo minhas 
-        habilidades para a área de Infraestrutura e Banco de Dados. Este portfólio é um espaço onde apresento meus principais 
-        projetos e talentos. Convido você a explorar meu trabalho e conhecer mais sobre minha trajetória profissional.
-      </div>
-
-      <div class="flex flex-wrap gap-4 mt-8">
-        <div class="bg-white p-2 rounded-lg shadow-sm border border-gray-100 dark:bg-slate-900">
-           <Icon name="tabler:brand-java" class="w-10 h-10 text-blue-600" />
-        </div>
-        <div class="bg-white p-2 rounded-lg shadow-sm border border-gray-100 dark:bg-slate-900">
-           <Icon name="tabler:brand-docker" class="w-10 h-10 text-blue-400" />
-        </div>
-        <div class="bg-white p-2 rounded-lg shadow-sm border border-gray-100 dark:bg-slate-900">
-           <Icon name="tabler:database" class="w-10 h-10 text-red-600" />
-        </div>
-        <div class="bg-white p-2 rounded-lg shadow-sm border border-gray-100 dark:bg-slate-900">
-           <Icon name="tabler:brand-python" class="w-10 h-10 text-yellow-500" />
-        </div>
+        habilidades para a área de Infraestrutura e Banco de Dados.
       </div>
     </Fragment>
 
@@ -80,33 +64,26 @@ const metadata = {
       <div class="absolute inset-0 bg-[#E5E4D7] dark:bg-transparent"></div>
     </Fragment>
   </Content>
-  
 
   <Features2
     title="Perfil Acadêmico"
-    tagline=""
     columns={1}
     items={[
       {
         title: 'Universidade São Judas Tadeu',
         subtitle: 'Análise e Desenvolvimento de Sistemas (2025 - 2027)',
-        description: `Durante minha experiência na Universidade São Judas Tadeu, participei de projetos inovadores como o Projeto de Presença por QR-code. Desenvolvi soluções alinhadas ao bem-estar social e tecnologia avançada. Essa vivência proporcionou aprendizado colaborativo e impacto positivo em desafios reais.`,
+        description: `Participação em projetos inovadores como o Projeto de Presença por QR-code. Desenvolvi soluções alinhadas ao bem-estar social e tecnologia avançada.`,
         icon: 'tabler:certificate',
       },
     ]}
-  >
-    <Fragment slot="bg">
-      <div class="absolute inset-0 bg-slate-50 dark:bg-transparent"></div>
-    </Fragment>
-  </Features2>
+  />
 
   <Features2
     title="Meus Projetos"
     items={[
       {
         title: 'Projeto Presença por QR-Code',
-        description: `Desenvolvimento de um sistema de controle de presença utilizando Java, com integração a um banco de dados MySQL, voltado para automatizar e otimizar o registro de frequência. O sistema permite a geração e leitura de QR Codes para identificação dos usuários, garantindo maior agilidade, segurança e confiabilidade no processo de registro.
-A aplicação realiza a validação dos dados capturados, armazena as informações de presença no banco de dados e possibilita consultas organizadas por usuário, data e horário.`,
+        description: `Sistema de controle de presença utilizando Java e MySQL para automatizar o registro de frequência com QR Codes.`,
         icon: 'tabler:coffee',
       },
       {
