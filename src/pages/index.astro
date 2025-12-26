@@ -37,60 +37,43 @@ const metadata = {
     </Fragment>
   </Hero>
 
-  <Content
-    isReversed
-    id="sobre"
-    tagline="Sobre Mim"
-    title="Quem sou eu"
+  <Features2
+    title="Perfil Acadêmico"
+    tagline=""
+    columns={1} 
     items={[
       {
-        title: 'Formação Acadêmica',
-        description: 'Atualmente cursando ADS, buscando criar soluções eficientes e seguras através da programação.',
+        title: 'IFSP',
+        subtitle: 'Ensino Médio Técnico em Mecânica Industrial (2021 - 2023)',
+        description: 'Em 2021, fui convocada para a matrícula no Instituto Federal de São Paulo onde entrei em 4º lugar. Durante três anos, cursei Técnico em Mecânica, adquirindo habilidades em programação CNC, tratamentos térmicos, resistência dos materiais, física e matemática avançada e processos de fabricação.',
+        icon: 'tabler:school',
       },
       {
-        title: 'Tecnologias',      
-        description: 'Especializando-se em ecossistemas Java e bancos de dados relacionais.',
+        title: 'FIAP',
+        subtitle: 'Análise e Desenvolvimento de Sistemas (2024 - 2026)',
+        description: 'Durante minha experiência na FIAP, participei de projetos inovadores como o ReciclaBalsa e o FixerAI. Em parceria com empresas como AWS e USP, desenvolvi soluções alinhadas à sustentabilidade e tecnologia avançada.',
+        icon: 'tabler:certificate',
       },
     ]}
-    image={{
-      src: 'https://images.unsplash.com/photo-1519389950473-47ba0277781c?auto=format&fit=crop&w=2070&q=80',
-      alt: 'Imagem representativa',
-    }}
   >
-    <Fragment slot="content">
-      <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">Desenvolvedor em evolução</h3>
-      Apaixonado por tecnologia e resolução de problemas complexos. Tenho facilidade em comunicação e liderança em projetos acadêmicos.
-    </Fragment>
-
     <Fragment slot="bg">
-      <div class="absolute inset-0 bg-[#E2E2D5] dark:bg-transparent"></div>
+      <div class="absolute inset-0 bg-slate-50 dark:bg-transparent"></div>
     </Fragment>
-  </Content>
+  </Features2>
 
   <Features2
     title="Meus Projetos"
-    subtitle="Confira alguns dos trabalhos que desenvolvi recentemente."
-    tagline="Portfólio"
     items={[
       {
         title: 'Projeto Java Swing',
         description: 'Sistema de desktop completo com integração a banco de dados MySQL.',
-        icon: 'tabler:coffee', // CORRIGIDO: tabler:brand-java não existe
+        icon: 'tabler:coffee', 
       },
       {
         title: 'Gestão de Dados',
         description: 'Modelagem e otimização de queries para sistemas de alta performance.',
         icon: 'tabler:database',
       },
-      {
-        title: 'Interface de Usuário',
-        description: 'Criação de telas amigáveis e intuitivas utilizando bibliotecas gráficas.',
-        icon: 'tabler:layout-board',
-      },
     ]}
-  >
-    <Fragment slot="bg">
-      <div class="absolute inset-0 bg-white dark:bg-transparent"></div>
-    </Fragment>
-  </Features2>
+  />
 </Layout>
