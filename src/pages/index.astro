@@ -42,6 +42,46 @@ const metadata = {
     </Fragment>
   </Hero>
 
+  <Content
+    id="sobre"
+    isReversed
+    tagline="Sobre Mim"
+    title="Quem sou eu"
+    image={{
+      src: '~/assets/images/foto-sobre.png', // Certifique-se de colocar sua foto com este nome na pasta
+      alt: 'Imagem de Perfil',
+    }}
+  >
+    <Fragment slot="content">
+      <div class="text-lg text-muted dark:text-slate-400 text-justify">
+        Olá, meu nome é Gustavo Ricarte, nascido no estado de São Paulo. Sou estudante de Análise e Desenvolvimento de Sistemas na 
+        Universidade São Judas Tadeu. Atualmente, atuo como desenvolvedor Back-end com foco em Java e estou expandindo minhas 
+        habilidades para a área de Infraestrutura e Banco de Dados. Este portfólio é um espaço onde apresento meus principais 
+        projetos e talentos. Convido você a explorar meu trabalho e conhecer mais sobre minha trajetória profissional.
+      </div>
+
+      <div class="flex flex-wrap gap-4 mt-8">
+        <div class="bg-white p-2 rounded-lg shadow-sm border border-gray-100 dark:bg-slate-900">
+           <Icon name="tabler:brand-java" class="w-10 h-10 text-blue-600" />
+        </div>
+        <div class="bg-white p-2 rounded-lg shadow-sm border border-gray-100 dark:bg-slate-900">
+           <Icon name="tabler:brand-docker" class="w-10 h-10 text-blue-400" />
+        </div>
+        <div class="bg-white p-2 rounded-lg shadow-sm border border-gray-100 dark:bg-slate-900">
+           <Icon name="tabler:database" class="w-10 h-10 text-red-600" />
+        </div>
+        <div class="bg-white p-2 rounded-lg shadow-sm border border-gray-100 dark:bg-slate-900">
+           <Icon name="tabler:brand-python" class="w-10 h-10 text-yellow-500" />
+        </div>
+      </div>
+    </Fragment>
+
+    <Fragment slot="bg">
+      <div class="absolute inset-0 bg-[#E5E4D7] dark:bg-transparent"></div>
+    </Fragment>
+  </Content>
+  
+
   <Features2
     title="Perfil Acadêmico"
     tagline=""
