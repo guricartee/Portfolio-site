@@ -22,16 +22,18 @@ const metadata = {
     image={{
       src: '~/assets/images/perfil.png',
       alt: 'Foto de Gustavo Ricarte',
-      // MUDANÇA AQUI: object-contain para ajustar a foto, e adicionei um fundo para preencher espaços
-      class: 'rounded-full w-64 h-64 object-contain border-4 border-[#800020] bg-gray-100 dark:bg-slate-800'
+      // mx-auto centraliza; h-64 e w-64 garantem que o círculo seja perfeito e não uma oval
+      class: 'mx-auto rounded-full w-64 h-64 object-cover border-4 border-[#800020] shadow-xl'
     }}
   >
     <Fragment slot="title">
-      {/* MUDANÇA AQUI: Texto maior (text-xl), mais margem (mb-4) e sem serifa */}
-      <span class="text-xl font-medium text-gray-600 dark:text-gray-400 block mb-4">
+      {/* tracking-normal impede as letras de ficarem grudadas. text-lg ajusta o tamanho. */}
+      <span class="text-lg font-light tracking-normal leading-relaxed text-gray-500 dark:text-slate-400 block mb-2">
         Olá, meu nome é:
       </span>
-      <span class="text-[#800020] dark:text-[#A52A2A] font-bold">Gustavo Ricarte</span>
+      <span class="text-[#800020] dark:text-[#A52A2A] font-bold tracking-normal">
+        Gustavo Ricarte
+      </span>
     </Fragment>
 
     <Fragment slot="subtitle">
