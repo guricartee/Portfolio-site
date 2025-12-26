@@ -21,7 +21,7 @@ const metadata = {
       },
     ]}
     image={{ 
-      src: '~/assets/images/hero-image.png', 
+      src: '~/assets/images/perfil.png', 
       alt: 'Foto de Gustavo Ricarte',
       class: 'rounded-full w-64 h-64 object-cover border-4 border-[#800020]' 
     }}
@@ -33,7 +33,7 @@ const metadata = {
 
     <Fragment slot="subtitle">
       Estudante de Análise e Desenvolvimento de Sistemas na <span class="font-semibold text-[#800020]">Universidade São Judas Tadeu</span>. 
-      Focado em desenvolvimento Back-end com <span class="italic">Java, MySQL e Swing</span>.
+      Focado em desenvolvimento Back-end com <span class="italic">Java,Phyton, MySQL e Swing</span>.
     </Fragment>
   </Hero>
 
@@ -60,13 +60,15 @@ const metadata = {
     title="Meus Projetos"
     items={[
       {
-        title: 'Projeto Java Swing',
-        description: 'Sistema de desktop completo com integração a banco de dados MySQL.',
+        title: 'Projeto Presença por QR-Code',
+        description: 'Desenvolvimento de um sistema de controle de presença utilizando Java, com integração a um banco de dados MySQL, voltado para automatizar e otimizar o registro de frequência. O sistema permite a geração e leitura de QR Codes para identificação dos usuários, garantindo maior agilidade, segurança e confiabilidade no processo de registro.
+A aplicação realiza a validação dos dados capturados, armazena as informações de presença no banco de dados e possibilita consultas organizadas por usuário, data e horário. O projeto contempla conceitos de programação orientada a objetos, integração com banco de dados (JDBC), modelagem de dados, além de boas práticas de desenvolvimento e organização de código.
+O objetivo principal é substituir métodos manuais de controle de presença por uma solução digital eficiente, reduzindo erros, fraudes e retrabalho, além de facilitar a gestão e o acompanhamento das informações registradas.',
         icon: 'tabler:coffee', 
       },
       {
-        title: 'Gestão de Dados',
-        description: 'Modelagem e otimização de queries para sistemas de alta performance.',
+        title: 'Tabelas MySQL',
+        description: 'Modelagem e otimização de tabelas para sistemas de alta performance.',
         icon: 'tabler:database',
       },
     ]}
