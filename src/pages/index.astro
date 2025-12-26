@@ -2,7 +2,8 @@
 import Layout from '~/layouts/PageLayout.astro';
 import Hero from '~/components/widgets/Hero.astro';
 import Features2 from '~/components/widgets/Features2.astro';
-import Content from '~/components/widgets/Content.astro'; // ESTA LINHA RESOLVE O ERRO ATUAL
+import Content from '~/components/widgets/Content.astro';
+import { Icon } from 'astro-icon/components'; // Adicionado para os ícones funcionarem
 
 const metadata = {
   title: 'Gustavo Ricarte',
@@ -23,7 +24,6 @@ const metadata = {
     image={{
       src: '~/assets/images/perfil.png',
       alt: 'Foto de Gustavo Ricarte',
-      // rounded-lg e object-contain para a foto aparecer INTEIRA
       class: 'mx-auto rounded-lg w-full max-w-md h-auto object-contain border-4 border-[#800020] shadow-2xl bg-white/50'
     }}
   >
@@ -53,10 +53,22 @@ const metadata = {
     }}
   >
     <Fragment slot="content">
-      <div class="text-lg text-muted dark:text-slate-400 text-justify">
+      <div class="text-lg text-muted dark:text-slate-400 text-justify mb-8">
         Olá, meu nome é Gustavo Ricarte, nascido no estado de São Paulo. Sou estudante de Análise e Desenvolvimento de Sistemas na 
         Universidade São Judas Tadeu. Atualmente, atuo como desenvolvedor Back-end com foco em Java e estou expandindo minhas 
-        habilidades para a área de Infraestrutura e Banco de Dados. Este portfólio é um espaço onde apresento meus principais projetos e talentos. Convido você a explorar meu trabalho e conhecer mais sobre minha trajetória profissional.
+        habilidades para a área de Infraestrutura e Banco de Dados. Este portfólio é um espaço onde apresento meus principais projetos e talentos.
+      </div>
+
+      <div class="flex flex-wrap gap-4 mt-6 justify-center md:justify-start">
+        <div class="bg-white p-3 rounded-xl shadow-md border border-gray-100 dark:bg-slate-800">
+           <Icon name="tabler:coffee" class="w-10 h-10 text-blue-600" />
+        </div>
+        <div class="bg-white p-3 rounded-xl shadow-md border border-gray-100 dark:bg-slate-800">
+           <Icon name="tabler:brand-python" class="w-10 h-10 text-yellow-500" />
+        </div>
+        <div class="bg-white p-3 rounded-xl shadow-md border border-gray-100 dark:bg-slate-800">
+           <Icon name="tabler:database" class="w-10 h-10 text-blue-800" />
+        </div>
       </div>
     </Fragment>
 
@@ -64,6 +76,42 @@ const metadata = {
       <div class="absolute inset-0 bg-[#E5E4D7] dark:bg-transparent"></div>
     </Fragment>
   </Content>
+
+  <Features2
+    items={[
+      {
+        title: 'Currículo',
+        description: `Meu currículo profissional, no qual apresento meus conhecimentos adquiridos ao longo da minha trajetória, minhas formações acadêmicas e certificações relevantes, além das experiências profissionais que me permitiram desenvolver habilidades práticas. Também destaco as áreas de interesse dentro da tecnologia nas quais busco me especializar e expandir meu conhecimento.`,
+        callToAction: {
+          text: 'Baixar CV',
+          href: '#', // Link para o seu arquivo PDF
+          variant: 'primary',
+        },
+      },
+      {
+        title: 'Certificados',
+        description: `Neste quadro, apresento todos os certificados que conquistei ao longo dos meus anos de estudo, adquiridos em plataformas renomadas como Alura, FIAP, PUCRS, Rockseat, Udemy, entre outras. Cada certificação reflete o meu compromisso contínuo com o aprendizado e o aprimoramento das minhas habilidades na área de tecnologia.`,
+        callToAction: {
+          text: 'Certificados',
+          href: '/certificados',
+          variant: 'primary',
+        },
+      },
+      {
+        title: 'Experiência',
+        description: `Minha experiência profissional na área de tecnologia tem sido essencial para agregar valor ao setor de desenvolvimento. Trabalhei com empresas reais, aplicando meus conhecimentos em projetos práticos, enfrentando desafios e contribuindo para soluções que geram resultados significativos.`,
+        callToAction: {
+          text: 'Experiência',
+          href: '/experiencia',
+          variant: 'primary',
+        },
+      },
+    ]}
+  >
+    <Fragment slot="bg">
+      <div class="absolute inset-0 bg-[#E5E4D7] dark:bg-transparent"></div>
+    </Fragment>
+  </Features2>
 
   <Features2
     title="Perfil Acadêmico"
