@@ -3,7 +3,7 @@ import Layout from '~/layouts/PageLayout.astro';
 import Hero from '~/components/widgets/Hero.astro';
 import Features2 from '~/components/widgets/Features2.astro';
 import Content from '~/components/widgets/Content.astro';
-import { Icon } from 'astro-icon/components'; // Adicionado para os ícones funcionarem
+import { Icon } from 'astro-icon/components'; 
 
 const metadata = {
   title: 'Gustavo Ricarte',
@@ -17,8 +17,7 @@ const metadata = {
       {
         variant: 'primary',
         text: 'Contate-me',
-        href: 'mailto:gustavoricarte12271227@gmail.com',
-        target: '_blank',
+        href: '#contato',
       },
     ]}
     image={{
@@ -81,16 +80,16 @@ const metadata = {
     items={[
       {
         title: 'Currículo',
-        description: `Meu currículo profissional, no qual apresento meus conhecimentos adquiridos ao longo da minha trajetória, minhas formações acadêmicas e certificações relevantes, além das experiências profissionais que me permitiram desenvolver habilidades práticas. Também destaco as áreas de interesse dentro da tecnologia nas quais busco me especializar e expandir meu conhecimento.`,
+        description: `Meu currículo profissional, no qual apresento meus conhecimentos adquiridos ao longo da minha trajetória, minhas formações acadêmicas e certificações relevantes, além das experiências profissionais que me permitiram desenvolver habilidades práticas.`,
         callToAction: {
           text: 'Baixar CV',
-          href: '#', // Link para o seu arquivo PDF
+          href: '#',
           variant: 'primary',
         },
       },
       {
         title: 'Certificados',
-        description: `Neste quadro, apresento todos os certificados que conquistei ao longo dos meus anos de estudo, adquiridos em plataformas renomadas como   Cisco,Fundação Bradesco, Universidade São Judas, entre outras. Cada certificação reflete o meu compromisso contínuo com o aprendizado e o aprimoramento das minhas habilidades na área de tecnologia.`,
+        description: `Neste quadro, apresento todos os certificados que conquistei ao longo dos meus anos de estudo, adquiridos em plataformas renomadas como Cisco, Fundação Bradesco, Universidade São Judas, entre outras.`,
         callToAction: {
           text: 'Certificados',
           href: '/certificados',
@@ -99,7 +98,7 @@ const metadata = {
       },
       {
         title: 'Experiência',
-        description: `Minha experiência profissional na área de tecnologia tem sido essencial para agregar valor ao setor de desenvolvimento. Trabalhei com empresas reais, aplicando meus conhecimentos em projetos práticos, enfrentando desafios e contribuindo para soluções que geram resultados significativos.`,
+        description: `Minha experiência profissional na área de tecnologia tem sido essencial para agregar valor ao setor de desenvolvimento. Trabalhei com empresas reais, aplicando meus conhecimentos em projetos práticos.`,
         callToAction: {
           text: 'Experiência',
           href: '/experiencia',
@@ -141,4 +140,12 @@ const metadata = {
       },
     ]}
   />
-</Layout>
+
+  <Content
+    id="contato"
+    title="Contato"
+    isReversed
+  >
+    <Fragment slot="image">
+      <div class="flex flex-col items-center">
+        <img src="~/assets/images/perfil.png" alt="Gustavo Ricarte" class="mx-auto rounded-lg w-full max-w-sm h-auto object-contain border-4 border-[#800020] shadow-2xl bg-white/50 mb-6" />
