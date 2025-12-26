@@ -1,7 +1,6 @@
  ---
 import Layout from '~/layouts/PageLayout.astro';
 import Hero from '~/components/widgets/Hero.astro';
-import Content from '~/components/widgets/Content.astro';
 import Features2 from '~/components/widgets/Features2.astro';
 
 const metadata = {
@@ -20,33 +19,36 @@ const metadata = {
         target: '_blank',
       },
     ]}
-    image={{ 
-      src: '~/assets/images/perfil.png', 
+    image={{
+      src: '~/assets/images/perfil.png',
       alt: 'Foto de Gustavo Ricarte',
-      class: 'rounded-full w-64 h-64 object-cover border-4 border-[#800020]' 
+      // MUDANÇA AQUI: object-contain para ajustar a foto, e adicionei um fundo para preencher espaços
+      class: 'rounded-full w-64 h-64 object-contain border-4 border-[#800020] bg-gray-100 dark:bg-slate-800'
     }}
   >
     <Fragment slot="title">
-      <span class="text-base font-serif text-gray-500 block mb-2">Olá, meu nome é:</span>
-      <span class="text-[#800020] dark:text-[#A52A2A]">Gustavo Ricarte</span>
+      {/* MUDANÇA AQUI: Texto maior (text-xl), mais margem (mb-4) e sem serifa */}
+      <span class="text-xl font-medium text-gray-600 dark:text-gray-400 block mb-4">
+        Olá, meu nome é:
+      </span>
+      <span class="text-[#800020] dark:text-[#A52A2A] font-bold">Gustavo Ricarte</span>
     </Fragment>
 
     <Fragment slot="subtitle">
-      Estudante de Análise e Desenvolvimento de Sistemas na <span class="font-semibold text-[#800020]">Universidade São Judas Tadeu</span>. 
-      Focado em desenvolvimento Back-end com <span class="italic">Java,Python, MySQL e Swing</span>.
+      Estudante de Análise e Desenvolvimento de Sistemas na <span class="font-semibold text-[#800020]">Universidade São Judas Tadeu</span>.
+      Focado em desenvolvimento Back-end com <span class="italic">Java, Python, MySQL e Swing</span>.
     </Fragment>
   </Hero>
 
   <Features2
     title="Perfil Acadêmico"
     tagline=""
-    columns={1} 
+    columns={1}
     items={[
-     
       {
         title: 'Universidade São Judas Tadeu',
         subtitle: 'Análise e Desenvolvimento de Sistemas (2025 - 2027)',
-        description: 'Durante minha experiência na Universidade São Judas Tadeu, participei de projetos inovadores como o Projeto de Presença por QR-code. Desenvolvi soluções alinhadas ao bem-estar social e tecnologia avançada. Essa vivência proporcionou aprendizado colaborativo e impacto positivo em desafios reais.',
+        description: `Durante minha experiência na Universidade São Judas Tadeu, participei de projetos inovadores como o Projeto de Presença por QR-code. Desenvolvi soluções alinhadas ao bem-estar social e tecnologia avançada. Essa vivência proporcionou aprendizado colaborativo e impacto positivo em desafios reais.`,
         icon: 'tabler:certificate',
       },
     ]}
@@ -61,8 +63,9 @@ const metadata = {
     items={[
       {
         title: 'Projeto Presença por QR-Code',
-        description: 'Desenvolvimento de um sistema de controle de presença utilizando Java, com integração a um banco de dados MySQL, voltado para automatizar e otimizar o registro de frequência. O sistema permite a geração e leitura de QR Codes para identificação dos usuários, garantindo maior agilidade, segurança e confiabilidade no processo de registro.A aplicação realiza a validação dos dados capturados, armazena as informações de presença no banco de dados e possibilita consultas organizadas por usuário, data e horário. O projeto contempla conceitos de programação orientada a objetos, integração com banco de dados (JDBC), modelagem de dados, além de boas práticas de desenvolvimento e organização de código.O objetivo principal é substituir métodos manuais de controle de presença por uma solução digital eficiente, reduzindo erros, fraudes e retrabalho, além de facilitar a gestão e o acompanhamento das informações registradas.',
-        icon: 'tabler:coffee', 
+        description: `Desenvolvimento de um sistema de controle de presença utilizando Java, com integração a um banco de dados MySQL, voltado para automatizar e otimizar o registro de frequência. O sistema permite a geração e leitura de QR Codes para identificação dos usuários, garantindo maior agilidade, segurança e confiabilidade no processo de registro.
+A aplicação realiza a validação dos dados capturados, armazena as informações de presença no banco de dados e possibilita consultas organizadas por usuário, data e horário.`,
+        icon: 'tabler:coffee',
       },
       {
         title: 'Tabelas MySQL',
