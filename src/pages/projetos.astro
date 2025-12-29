@@ -1,0 +1,58 @@
+ ---
+import Layout from '~/layouts/PageLayout.astro';
+import { Icon } from 'astro-icon/components';
+
+const projects = [
+  {
+    title: 'FixerAI',
+    description: 'Desenvolvimento de um sistema de gestão integrada para oficinas automotivas em parceria com a Porto Seguro.',
+    image: '/images/projetos/fixerai-thumb.png',
+    link: '/projetos/fixerai'
+  },
+  {
+    title: 'ReciclaBalsa',
+    description: 'Proposta para integrar iniciativas de reciclagem com o transporte fluvial de forma sustentável.',
+    image: '/images/projetos/reciclabalsa.png',
+    link: '#'
+  },
+  {
+    title: 'Portfólio dos Estudantes',
+    description: 'Portfólio grupal com notas, feedbacks e design estilizado para mostrar o desempenho acadêmico.',
+    image: '/images/projetos/portfolio-estudantes.png',
+    link: '#'
+  }
+];
+---
+
+<Layout>
+  <section class="bg-[#1a1a1a] min-h-screen py-16 px-4">
+    <div class="max-w-6xl mx-auto text-center">
+      <h1 class="text-white text-4xl font-serif mb-8">Meus Projetos</h1>
+      
+      <div class="max-w-2xl mx-auto mb-12 relative">
+        <span class="absolute inset-y-0 left-3 flex items-center text-gray-400">
+          <Icon name="tabler:search" class="w-5 h-5" />
+        </span>
+        <input 
+          type="text" 
+          placeholder="Pesquisar projetos..." 
+          class="w-full bg-white rounded-md py-2 pl-10 pr-4 outline-none text-gray-800"
+        />
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+        {projects.map((proj) => (
+          <a href={proj.link} class="group">
+            <div class="bg-[#2a2a2a] rounded-lg overflow-hidden border border-gray-700 transition-all group-hover:border-white">
+              <img src={proj.image} alt={proj.title} class="w-full aspect-video object-cover" />
+              <div class="p-6 text-center">
+                <h3 class="text-white text-xl font-bold mb-3">{proj.title}</h3>
+                <p class="text-gray-400 text-sm leading-relaxed">{proj.description}</p>
+              </div>
+            </div>
+          </a>
+        ))}
+      </div>
+    </div>
+  </section>
+</Layout>
