@@ -16,20 +16,13 @@ const projects = [
     description: 'Este é um sistema de controle de presença desenvolvido em Java (Swing) com banco de dados MySQL, voltado para uso em instituições de ensino. Ele permite que a escola cadastre alunos e que os próprios alunos gerem e escaneiem QR Codes para registrar sua entrada e saída nas aulas.',
     image: '/images/image-qrcode.png',
     link: '/qrcode'
-  },
-  // Você pode adicionar mais projetos aqui seguindo o mesmo padrão
+  }
 ];
 ---
 
 <Layout metadata={metadata}>
   <Hero
-    actions={[
-      {
-        variant: 'primary',
-        text: 'Contate-me',
-        href: '#contato',
-      },
-    ]}
+    actions={[{ variant: 'primary', text: 'Contate-me', href: '#contato' }]}
     image={{
       src: '~/assets/images/perfil.png',
       alt: 'Foto de Gustavo Ricarte',
@@ -37,17 +30,12 @@ const projects = [
     }}
   >
     <Fragment slot="title">
-      <span class="text-4xl font-light tracking-widest leading-loose text-gray-500 dark:text-slate-400 block mb-4">
-        Olá, meu nome é:
-      </span>
-      <span class="text-[#800020] dark:text-[#A52A2A] font-bold text-6xl tracking-normal">
-        Gustavo Ricarte
-      </span>
+      <span class="text-4xl font-light tracking-widest leading-loose text-gray-500 block mb-4">Olá, meu nome é:</span>
+      <span class="text-[#800020] font-bold text-6xl tracking-normal">Gustavo Ricarte</span>
     </Fragment>
-
     <Fragment slot="subtitle">
-      Estudante de Análise e Desenvolvimento de Sistemas na <span class="font-semibold text-[#800020]">Universidade São Judas Tadeu</span>.
-      Focado em desenvolvimento Back-end com <span class="italic">Java, Python, MySQL e Swing</span>.
+      Estudante de ADS na <span class="font-semibold text-[#800020]">Universidade São Judas Tadeu</span>.
+      Focado em <span class="italic">Java, Python, MySQL e Swing</span>.
     </Fragment>
   </Hero>
 
@@ -56,55 +44,105 @@ const projects = [
     isReversed
     tagline="Sobre Mim"
     title="Quem sou eu"
-    image={{
-      src: '~/assets/images/perfil.png',
-      alt: 'Imagem de Perfil',
-    }}
+    image={{ src: '~/assets/images/perfil.png', alt: 'Imagem de Perfil' }}
   >
     <Fragment slot="content">
-      <div class="text-lg text-muted dark:text-slate-400 text-justify mb-8">
-        Olá, meu nome é Gustavo Ricarte, nascido no estado de São Paulo. Sou estudante de Análise e Desenvolvimento de Sistemas na 
-        Universidade São Judas Tadeu. Atualmente, atuo como desenvolvedor Back-end com foco em Java e estou expandindo minhas 
-        habilidades para a área de Infraestrutura e Banco de Dados. Este portfólio é um espaço onde apresento meus principais projetos e talentos.
+      <div class="text-lg text-muted text-justify mb-8">
+        Sou estudante de Análise e Desenvolvimento de Sistemas na Universidade São Judas Tadeu. Atualmente, atuo como desenvolvedor Back-end com foco em Java e Infraestrutura.
       </div>
-
-      <div class="flex flex-wrap gap-4 mt-6 justify-center md:justify-start">
-        <div class="bg-white p-3 rounded-xl shadow-md border border-gray-100 dark:bg-slate-800">
-           <Icon name="tabler:coffee" class="w-10 h-10 text-blue-600" />
-        </div>
-        <div class="bg-white p-3 rounded-xl shadow-md border border-gray-100 dark:bg-slate-800">
-           <Icon name="tabler:brand-python" class="w-10 h-10 text-yellow-500" />
-        </div>
-        <div class="bg-white p-3 rounded-xl shadow-md border border-gray-100 dark:bg-slate-800">
-           <Icon name="tabler:database" class="w-10 h-10 text-blue-800" />
-        </div>
+      <div class="flex gap-4 mt-6">
+        <div class="bg-white p-3 rounded-xl shadow-md border border-gray-100"><Icon name="tabler:coffee" class="w-10 h-10 text-blue-600" /></div>
+        <div class="bg-white p-3 rounded-xl shadow-md border border-gray-100"><Icon name="tabler:brand-python" class="w-10 h-10 text-yellow-500" /></div>
+        <div class="bg-white p-3 rounded-xl shadow-md border border-gray-100"><Icon name="tabler:database" class="w-10 h-10 text-blue-800" /></div>
       </div>
     </Fragment>
-
-    <Fragment slot="bg">
-      <div class="absolute inset-0 bg-[#E5E4D7] dark:bg-transparent"></div>
-    </Fragment>
+    <Fragment slot="bg"><div class="absolute inset-0 bg-[#E5E4D7]"></div></Fragment>
   </Content>
 
   <Features2
     items={[
-      {
-        title: 'Currículo',
-        description: `Meu currículo profissional, no qual apresento meus conhecimentos adquiridos ao longo da minha trajetória...`,
-        callToAction: {
-          text: 'Baixar CV',
-          href: '#',
-          variant: 'primary',
-        },
-      },
-      {
-        title: 'Certificados',
-        description: `Neste quadro, apresento todos os certificados que conquistei ao longo dos meus anos de estudo...`,
-        callToAction: {
-          text: 'Certificados',
-          href: '/certificados',
-          variant: 'primary',
-        },
-      },
-      {
-        title: 'Experiência',
+      { title: 'Currículo', description: 'Meus conhecimentos e trajetória profissional.', callToAction: { text: 'Baixar CV', href: '#', variant: 'primary' } },
+      { title: 'Certificados', description: 'Certificações Cisco, Bradesco e Acadêmicas.', callToAction: { text: 'Certificados', href: '/certificados', variant: 'primary' } },
+      { title: 'Experiência', description: 'Atuação em projetos reais e empresas.', callToAction: { text: 'Experiência', href: '/experiencia', variant: 'primary' } }
+    ]}
+  >
+    <Fragment slot="bg"><div class="absolute inset-0 bg-[#E5E4D7]"></div></Fragment>
+  </Features2>
+
+  <section class="bg-[#1a1a1a] py-20 px-4">
+    <div class="max-w-6xl mx-auto text-center">
+      <h2 class="text-white text-5xl font-bold mb-16 border-b-2 border-[#800020] inline-block">Perfil Acadêmico</h2>
+      <div class="flex justify-center">
+        <div class="max-w-2xl w-full bg-[#2a2a2a] rounded-xl overflow-hidden border border-gray-700 shadow-2xl transition-transform hover:-translate-y-2">
+          <img src="/images/academico/usjt.jpg" alt="USJT" class="w-full h-64 object-cover" />
+          <div class="p-8">
+            <h3 class="text-white text-3xl font-bold mb-2">Universidade São Judas Tadeu</h3>
+            <p class="text-white text-lg mb-6">ADS (2025 - 2027)</p>
+            <p class="text-white text-base text-justify leading-relaxed">
+              Participação em projetos inovadores como o Projeto de Presença por QR-code. Desenvolvi soluções focadas em tecnologia avançada e Back-end.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="projetos" class="bg-[#1a1a1a] py-20 px-4 border-t border-gray-800">
+    <div class="max-w-6xl mx-auto text-center">
+      <h2 class="text-white text-5xl font-bold mb-10">Meus Projetos</h2>
+      <div class="max-w-2xl mx-auto mb-16 relative">
+        <span class="absolute inset-y-0 left-3 flex items-center text-gray-400"><Icon name="tabler:search" class="w-6 h-6" /></span>
+        <input type="text" id="projectSearch" placeholder="Pesquisar..." class="w-full bg-white rounded-md py-3 pl-12 pr-4 text-gray-800" />
+      </div>
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-10" id="projectGrid">
+        {projects.map((proj) => (
+          <div class="project-card group transition-transform hover:-translate-y-2">
+            <a href={proj.link}>
+              <div class="bg-[#2a2a2a] rounded-xl overflow-hidden border border-gray-800 group-hover:border-[#800020] shadow-2xl">
+                <img src={proj.image} alt={proj.title} class="w-full aspect-video object-cover" />
+                <div class="p-8">
+                  <h3 class="text-white text-2xl font-bold mb-4">{proj.title}</h3>
+                  <p class="text-white text-lg text-justify leading-relaxed">{proj.description}</p>
+                </div>
+              </div>
+            </a>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <Content id="contato" title="Contato" isReversed>
+    <Fragment slot="image">
+      <div class="flex flex-col items-center">
+        <img src="/src/assets/images/perfil.png" class="rounded-lg w-full max-w-sm border-4 border-[#800020] mb-6" />
+        <div class="flex gap-6">
+          <a href="https://github.com/guricartee" target="_blank"><Icon name="tabler:brand-github" class="w-10 h-10 text-gray-800" /></a>
+          <a href="https://linkedin.com/in/guricarte" target="_blank"><Icon name="tabler:brand-linkedin" class="w-10 h-10 text-blue-700" /></a>
+        </div>
+      </div>
+    </Fragment>
+    <Fragment slot="content">
+      <h3 class="text-2xl font-bold mb-6 underline decoration-[#800020]">Me mande um email</h3>
+      <form action="https://formspree.io/f/meeqodrq" method="POST" class="space-y-4">
+        <input type="text" name="name" required class="w-full p-3 rounded-lg border border-gray-300" placeholder="Nome" />
+        <input type="email" name="email" required class="w-full p-3 rounded-lg border border-gray-300" placeholder="Email" />
+        <textarea name="message" rows="4" required class="w-full p-3 rounded-lg border border-gray-300" placeholder="Mensagem"></textarea>
+        <button type="submit" class="w-full px-6 py-3 rounded-lg bg-[#333333] text-white font-semibold hover:bg-[#800020]">Enviar</button>
+      </form>
+    </Fragment>
+    <Fragment slot="bg"><div class="absolute inset-0 bg-[#E5E4D7]"></div></Fragment>
+  </Content>
+
+  <script>
+    const searchInput = document.getElementById('projectSearch') as HTMLInputElement;
+    const projectCards = document.querySelectorAll('.project-card');
+    searchInput?.addEventListener('input', () => {
+      const term = searchInput.value.toLowerCase();
+      projectCards.forEach(card => {
+        const text = card.textContent?.toLowerCase() || '';
+        (card as HTMLElement).style.display = text.includes(term) ? 'block' : 'none';
+      });
+    });
+  </script>
+</Layout>
