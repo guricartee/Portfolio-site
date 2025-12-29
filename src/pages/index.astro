@@ -9,6 +9,17 @@ const metadata = {
   title: 'Gustavo Ricarte',
   ignoreTitleTemplate: true,
 };
+
+const projects = [
+  {
+    title: 'Presença por QR-Code',
+    description: 'Este é um sistema de controle de presença desenvolvido em Java (Swing) com banco de dados MySQL, voltado para uso em instituições de ensino. Ele permite que a escola cadastre alunos e que os próprios alunos gerem e escaneiem QR Codes para registrar sua entrada e saída nas aulas.',
+    image: '/images/image-qrcode.png',
+    link: '/qrcode'
+  },
+  
+  
+];
 ---
 
 <Layout metadata={metadata}>
@@ -125,35 +136,53 @@ const metadata = {
     ]}
   />
 
-  <Features2
-    title="Meus Projetos"
-    items={[
-      {
-        title: 'Projeto Presença por QR-Code',
-        description: 'Sistema de controle de presença utilizando Java e MySQL para automatizar o registro de frequência com QR Codes.',
-        icon: 'tabler:coffee',
-        callToAction: {
-          text: 'Ver detalhes',
-          href: '/qrcode', // Link para a página individual do projeto
-        },
-      },
+  <section id="projetos" class="bg-[#1a1a1a] py-20 px-4">
+    <div class="max-w-6xl mx-auto text-center">
+      <h2 class="text-white text-5xl font-bold mb-10">Meus Projetos</h2>
       
-    ]}
-  >
-    <Fragment slot="bg">
-      <div class="absolute inset-0 bg-[#E5E4D7] dark:bg-transparent"></div>
-    </Fragment>
-  </Features2>
+      <div class="max-w-2xl mx-auto mb-16 relative">
+        <span class="absolute inset-y-0 left-3 flex items-center text-gray-400">
+          <Icon name="tabler:search" class="w-6 h-6" />
+        </span>
+        <input 
+          type="text" 
+          id="projectSearch"
+          placeholder="Pesquisar projetos..." 
+          class="w-full bg-white rounded-md py-3 pl-12 pr-4 outline-none text-gray-800 shadow-lg"
+        />
+      </div>
 
-  <div class="flex justify-center -mt-12 pb-16 bg-[#E5E4D7] dark:bg-transparent">
-    <a 
-      href="/projetos" 
-      class="inline-flex items-center justify-center px-6 py-3 border border-transparent text-base font-medium rounded-md text-white bg-[#800020] hover:bg-[#333333] transition-colors duration-300 shadow-lg"
-    >
-      Ver todos os projetos
-    </a>
-  </div>
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-10" id="projectGrid">
+        {projects.map((proj) => (
+          <div class="project-card group transition-all duration-300 hover:-translate-y-2">
+            <a href={proj.link}>
+              <div class="bg-[#2a2a2a] rounded-xl overflow-hidden border border-gray-800 transition-all group-hover:border-[#800020] shadow-2xl">
+                <img src={proj.image} alt={proj.title} class="w-full aspect-video object-cover" />
+                <div class="p-8 text-center">
+                  <h3 class="text-white text-2xl font-bold mb-4">{proj.title}</h3>
+                  <p class="text-gray-400 text-sm leading-relaxed">{proj.description}</p>
+                </div>
+              </div>
+            </a>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
 
+  <script>
+    const searchInput = document.getElementById('projectSearch') as HTMLInputElement;
+    const projectCards = document.querySelectorAll('.project-card');
+
+    searchInput?.addEventListener('input', () => {
+      const searchTerm = searchInput.value.toLowerCase();
+      projectCards.forEach(card => {
+        const title = card.querySelector('h3')?.textContent?.toLowerCase() || '';
+        const desc = card.querySelector('p')?.textContent?.toLowerCase() || '';
+        (card as HTMLElement).style.display = (title.includes(searchTerm) || desc.includes(searchTerm)) ? 'block' : 'none';
+      });
+    });
+  </script>
   <Content
     id="contato"
     title="Contato"
