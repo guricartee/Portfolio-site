@@ -1,0 +1,84 @@
+ ---
+import Layout from '~/layouts/PageLayout.astro';
+import { Icon } from 'astro-icon/components';
+
+const metadata = {
+  title: 'Certificados | Gustavo Ricarte',
+};
+
+// Lista de certificados baseada na sua imagem
+const certificados = [
+  { title: 'Excel: Automatizando tarefas com Macros', platform: 'Alura', image: '/images/cert-excel.jpg' },
+  { title: 'Power Apps: Descobrindo o poder da automação lowcode', platform: 'Alura', image: '/images/cert-powerapps.jpg' },
+  { title: 'Power Automate: automatize processos e tarefas repetitivas e rotineiras', platform: 'Alura', image: '/images/cert-powerautomate.jpg' },
+  { title: 'Power BI Desktop: construindo meu primeiro dashboard', platform: 'Alura', image: '/images/cert-powerbi.jpg' },
+  { title: 'Básico sobre o funcionamento do computador', platform: 'AdaTech', image: '/images/cert-basico.jpg' },
+  { title: 'Desenvolvimento de aplicação serverless com Java e Maven', platform: 'RocketSeat', image: '/images/cert-serverless.jpg' },
+  { title: 'Git e Versionamento', platform: 'AdaTech', image: '/images/cert-git.jpg' },
+  { title: 'SQL para Análise de Dados: Do básico ao avançado', platform: 'Udemy', image: '/images/cert-sql.jpg' },
+];
+---
+
+<Layout metadata={metadata}>
+  <section class="bg-[#E5E4D7] min-h-screen py-12 px-4 sm:px-6 lg:px-8">
+    <div class="max-w-6xl mx-auto">
+      
+      <div class="mb-8">
+        <a href="/" class="flex items-center text-gray-700 hover:text-black transition-colors mb-4">
+          <Icon name="tabler:arrow-left" class="w-6 h-6 mr-2" />
+        </a>
+        <h1 class="text-3xl font-bold border-b-2 border-black inline-block pb-1">Certificados</h1>
+      </div>
+
+      <div class="flex justify-center mb-12">
+        <div class="relative w-full max-w-xl">
+          <span class="absolute inset-y-0 left-3 flex items-center">
+            <Icon name="tabler:search" class="w-5 h-5 text-gray-400" />
+          </span>
+          <input 
+            type="text" 
+            id="searchCert"
+            placeholder="Pesquisar certificados..." 
+            class="w-full pl-10 pr-4 py-2 border border-gray-300 rounded shadow-sm focus:ring-2 focus:ring-[#800020] focus:border-transparent outline-none"
+          />
+        </div>
+      </div>
+
+      <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6" id="certGrid">
+        {certificados.map((cert) => (
+          <div class="cert-card bg-white rounded-lg shadow-md overflow-hidden flex flex-col transition-transform hover:scale-105">
+            <div class="aspect-video bg-gray-200">
+               <img src={cert.image} alt={cert.title} class="w-full h-full object-cover" />
+            </div>
+            <div class="p-4 flex-grow flex flex-col justify-center text-center">
+              <h3 class="text-sm font-semibold text-gray-800 leading-tight mb-1">
+                {cert.title}
+              </h3>
+              <p class="text-xs text-gray-500 italic">({cert.platform})</p>
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <script>
+    const searchInput = document.getElementById('searchCert') as HTMLInputElement;
+    const cards = document.querySelectorAll('.cert-card');
+
+    searchInput?.addEventListener('input', () => {
+      const searchTerm = searchInput.value.toLowerCase();
+
+      cards.forEach(card => {
+        const title = card.querySelector('h3')?.textContent?.toLowerCase() || '';
+        const platform = card.querySelector('p')?.textContent?.toLowerCase() || '';
+        
+        if (title.includes(searchTerm) || platform.includes(searchTerm)) {
+          (card as HTMLElement).style.display = 'flex';
+        } else {
+          (card as HTMLElement).style.display = 'none';
+        }
+      });
+    });
+  </script>
+</Layout>
