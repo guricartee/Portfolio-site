@@ -1,4 +1,4 @@
----
+ ---
 import Layout from '~/layouts/PageLayout.astro';
 import Hero from '~/components/widgets/Hero.astro';
 import Features2 from '~/components/widgets/Features2.astro';
@@ -30,9 +30,14 @@ const projects = [
     }}
   >
     <Fragment slot="title">
-      <span class="text-4xl font-light tracking-widest leading-loose text-gray-500 block mb-4">Olá, meu nome é:</span>
-      <span class="text-[#800020] font-bold text-6xl tracking-normal">Gustavo Ricarte</span>
+      <span class="text-4xl font-light tracking-widest leading-loose text-gray-500 block mb-4">
+        Olá, meu nome é:
+      </span>
+      <span class="text-[#800020] font-bold text-6xl tracking-normal">
+        Gustavo Ricarte
+      </span>
     </Fragment>
+
     <Fragment slot="subtitle">
       Estudante de ADS na <span class="font-semibold text-[#800020]">Universidade São Judas Tadeu</span>.
       Focado em <span class="italic">Java, Python, MySQL e Swing</span>.
@@ -51,9 +56,15 @@ const projects = [
         Sou estudante de Análise e Desenvolvimento de Sistemas na Universidade São Judas Tadeu. Atualmente, atuo como desenvolvedor Back-end com foco em Java e Infraestrutura.
       </div>
       <div class="flex gap-4 mt-6">
-        <div class="bg-white p-3 rounded-xl shadow-md border border-gray-100"><Icon name="tabler:coffee" class="w-10 h-10 text-blue-600" /></div>
-        <div class="bg-white p-3 rounded-xl shadow-md border border-gray-100"><Icon name="tabler:brand-python" class="w-10 h-10 text-yellow-500" /></div>
-        <div class="bg-white p-3 rounded-xl shadow-md border border-gray-100"><Icon name="tabler:database" class="w-10 h-10 text-blue-800" /></div>
+        <div class="bg-white p-3 rounded-xl shadow-md border border-gray-100">
+          <Icon name="tabler:coffee" class="w-10 h-10 text-blue-600" />
+        </div>
+        <div class="bg-white p-3 rounded-xl shadow-md border border-gray-100">
+          <Icon name="tabler:brand-python" class="w-10 h-10 text-yellow-500" />
+        </div>
+        <div class="bg-white p-3 rounded-xl shadow-md border border-gray-100">
+          <Icon name="tabler:database" class="w-10 h-10 text-blue-800" />
+        </div>
       </div>
     </Fragment>
     <Fragment slot="bg"><div class="absolute inset-0 bg-[#E5E4D7]"></div></Fragment>
@@ -91,7 +102,9 @@ const projects = [
     <div class="max-w-6xl mx-auto text-center">
       <h2 class="text-white text-5xl font-bold mb-10">Meus Projetos</h2>
       <div class="max-w-2xl mx-auto mb-16 relative">
-        <span class="absolute inset-y-0 left-3 flex items-center text-gray-400"><Icon name="tabler:search" class="w-6 h-6" /></span>
+        <span class="absolute inset-y-0 left-3 flex items-center text-gray-400">
+          <Icon name="tabler:search" class="w-6 h-6" />
+        </span>
         <input type="text" id="projectSearch" placeholder="Pesquisar..." class="w-full bg-white rounded-md py-3 pl-12 pr-4 text-gray-800" />
       </div>
       <div class="grid grid-cols-1 md:grid-cols-3 gap-10" id="projectGrid">
@@ -146,64 +159,3 @@ const projects = [
     });
   </script>
 </Layout>
-
-
-
-
----
-import Layout from '~/layouts/PageLayout.astro';
-import Hero from '~/components/widgets/Hero.astro';
-import Features2 from '~/components/widgets/Features2.astro';
-import Content from '~/components/widgets/Content.astro';
-import { Icon } from 'astro-icon/components'; 
-
-const metadata = {
-  title: 'Gustavo Ricarte',
-  ignoreTitleTemplate: true,
-};
-
-const projects = [
-  {
-    title: 'Presença por QR-Code',
-    description: 'Este é um sistema de controle de presença desenvolvido em Java (Swing) com banco de dados MySQL, voltado para uso em instituições de ensino. Ele permite que a escola cadastre alunos e que os próprios alunos gerem e escaneiem QR Codes para registrar sua entrada e saída nas aulas.',
-    image: '/images/image-qrcode.png',
-    link: '/qrcode'
-    },
-    }
-];
----
-
-<Layout metadata={metadata}>
-  <Hero
-actions={[
-      {
-        variant: 'primary',
-        text: 'Contate-me',
-        href: '#contato',
-      },
-    ]}
-    actions={[{ variant: 'primary', text: 'Contate-me', href: '#contato' }]}
-    image={{
-      src: '~/assets/images/perfil.png',
-      alt: 'Foto de Gustavo Ricarte',
-      class: 'mx-auto rounded-lg w-full max-w-md h-auto object-contain border-4 border-[#800020] shadow-2xl bg-white/50'
-    }}
-  >
-    <Fragment slot="title">
-    <span class="text-4xl font-light tracking-widest leading-loose text-gray-500 dark:text-slate-400 block mb-4">
-        Olá, meu nome é:
-      </span>
-      <span class="text-[#800020] dark:text-[#A52A2A] font-bold text-6xl tracking-normal">
-        Gustavo Ricarte
-      </span>
-      <span class="text-4xl font-light tracking-widest leading-loose text-gray-500 dark:text-slate-400 block mb-4">
-        Olá, meu nome é:
-      </span>
-      <span class="text-[#800020] dark:text-[#A52A2A] font-bold text-6xl tracking-normal">
-        Gustavo Ricarte
-      </span>
-       <span class="text-4xl font-light tracking-widest leading-loose text-gray-500 block mb-4">Olá, meu nome é:</span>
-      <span class="text-[#800020] font-bold text-6xl tracking-normal">Gustavo Ricarte</span>
-    </Fragment>
-<Fragment slot="subtitle">
-<Fragment slot="subtitle">
