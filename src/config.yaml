@@ -1,5 +1,5 @@
 site:
-  name: AstroWind
+  name: Portfólio
   site: 'https://astrowind.vercel.app'
   base: '/'
   trailingSlash: false
