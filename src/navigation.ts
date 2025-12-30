@@ -11,12 +11,12 @@ export const headerData = {
       href: '#sobre',
     },
     {
-      text: 'ACADÊMICO',
-      href: '#academico',
-    },
-    {
       text: 'PROJETOS',
       href: '#projetos',
+    },
+    {
+      text: 'ACADÊMICO',
+      href: '#academico',
     },
   ],
   actions: [{ text: 'GitHub', href: 'https://github.com/guricartee', target: '_blank' }],
