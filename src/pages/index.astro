@@ -4,6 +4,7 @@ import Hero from '~/components/widgets/Hero.astro';
 import Features2 from '~/components/widgets/Features2.astro';
 import Content from '~/components/widgets/Content.astro';
 import { Icon } from 'astro-icon/components'; 
+import perfilImg from '~/assets/images/perfil.png';
 
 const metadata = {
   title: 'Gustavo Ricarte',
@@ -54,7 +55,7 @@ const projects = [
       <!-- IMAGEM (DIREITA) -->
       <div class="flex justify-center">
         <img
-          src="/assets/images/perfil.png"
+          src= {perfilImg.src}
           alt="Foto de Gustavo Ricarte"
           class="w-80 h-80 object-cover rounded-full border-4 border-[#800020] shadow-xl"
         />
@@ -149,7 +150,7 @@ const projects = [
   <Content id="contato" title="Contato" isReversed>
     <Fragment slot="image">
       <div class="flex flex-col items-center">
-        <img src="/assets/images/perfil.png" class="rounded-lg w-full max-w-sm border-4 border-[#800020] mb-6" />
+        <img src= {perfilImg.src} class="rounded-lg w-full max-w-sm border-4 border-[#800020] mb-6" />
         <div class="flex gap-6">
           <a href="https://github.com/guricartee" target="_blank"><Icon name="tabler:brand-github" class="w-10 h-10 text-gray-800" /></a>
           <a href="https://linkedin.com/in/guricarte" target="_blank"><Icon name="tabler:brand-linkedin" class="w-10 h-10 text-blue-700" /></a>
