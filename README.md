@@ -1,5 +1,5 @@
-# MEU PORTFÓLIO 👩‍💻
-Um portfólio é mais do que um simples site: é a sua identidade profissional, a forma como você apresenta suas habilidades e como comunica o valor que pode oferecer. Pensando nisso, desenvolvi um web site com design de tons de cinza, bege e branco, que harmoniza com minhas fotos profissionais de fundo. O portfólio conta com seções dedicadas a:
+# MEU PORTFÓLIO 
+Um portfólio é mais do que um simples site: é a sua identidade profissional, a forma como você apresenta suas habilidades e como comunica o valor que pode oferecer. Pensando nisso, desenvolvi um web site com design de tons de azul escuro, bege e branco, que harmoniza com minhas fotos profissionais de fundo. O portfólio conta com seções dedicadas a:
 
 Sobre mim
 
@@ -32,7 +32,7 @@ Destaques: Responsividade completa, garantindo uma experiência ideal em todas a
 
 
 
-hashtag#Portfólio hashtag#DesenvolvimentoWeb hashtag#TypeScript hashtag#TailwindCSS hashtag#NextJS hashtag#Figma hashtag#Sistemas
+#Portfólio #DesenvolvimentoWeb #TypeScript#TailwindCSS#Sistemas
 
 
        
