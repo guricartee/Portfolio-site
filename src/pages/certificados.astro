@@ -25,14 +25,15 @@ const certificados = [
 ---
 
 <Layout metadata={metadata}>
-  <section class="bg-[#E5E4D7] min-h-screen py-12 px-4 sm:px-6 lg:px-8">
+  <section class="bg-[#E5E4D7] dark:bg-[#E5E4D7] min-h-screen py-12 px-4 sm:px-6 lg:px-8 transition-colors">
     <div class="max-w-6xl mx-auto">
       
       <div class="mb-8">
-        <a href="/" class="flex items-center text-gray-700 hover:text-black transition-colors mb-4">
+        <a href="/" class="flex items-center !text-gray-700 hover:!text-black transition-colors mb-4">
           <Icon name="tabler:arrow-left" class="w-6 h-6 mr-2" />
+          <span>Voltar</span>
         </a>
-        <h1 class="text-3xl font-bold border-b-2 border-black inline-block pb-1">Certificados</h1>
+        <h1 class="text-3xl font-bold border-b-2 !border-black inline-block pb-1 !text-gray-900">Certificados</h1>
       </div>
 
       <div class="flex justify-center mb-12">
@@ -44,22 +45,25 @@ const certificados = [
             type="text" 
             id="searchCert"
             placeholder="Pesquisar certificados..." 
-            class="w-full pl-10 pr-4 py-2 border border-gray-300 rounded shadow-sm focus:ring-2 focus:ring-[#800020] focus:border-transparent outline-none"
+            class="w-full pl-10 pr-4 py-2 border border-gray-300 rounded shadow-sm focus:ring-2 focus:ring-[#800020] focus:border-transparent outline-none bg-white dark:bg-white !text-gray-900 !placeholder-gray-500"
           />
         </div>
       </div>
 
       <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6" id="certGrid">
         {certificados.map((cert) => (
-          <div class="cert-card bg-white rounded-lg shadow-md overflow-hidden flex flex-col transition-transform hover:scale-105">
+          /* Card: Forçado fundo branco sempre */
+          <div class="cert-card bg-white dark:bg-white rounded-lg shadow-md overflow-hidden flex flex-col transition-transform hover:scale-105">
             <div class="aspect-video bg-gray-200">
                <img src={cert.image} alt={cert.title} class="w-full h-full object-cover" />
             </div>
             <div class="p-4 flex-grow flex flex-col justify-center text-center">
-              <h3 class="text-sm font-semibold text-gray-800 leading-tight mb-1">
+              /* Forçando cor do título do certificado */
+              <h3 class="text-sm font-semibold !text-gray-800 leading-tight mb-1">
                 {cert.title}
               </h3>
-              <p class="text-xs text-gray-500 italic">({cert.platform})</p>
+              /* Forçando cor da plataforma (itálico) */
+              <p class="text-xs !text-gray-600 italic">({cert.platform})</p>
             </div>
           </div>
         ))}
