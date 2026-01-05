@@ -1,25 +1,25 @@
 # MEU PORTFÓLIO 
 Um portfólio é mais do que um simples site: é a sua identidade profissional, a forma como você apresenta suas habilidades e como comunica o valor que pode oferecer. Pensando nisso, desenvolvi um web site com design de tons de azul escuro, bege e branco, que harmoniza com minhas fotos profissionais de fundo. O portfólio conta com seções dedicadas a:
 
--Sobre mim
+- Sobre mim
 
--Experiência profissional
+- Experiência profissional
 
--Currículo
+- Currículo
 
--Perfil acadêmico
+- Perfil acadêmico
 
--Contato (inclusive com um formulário para envio de propostas diretamente por e-mail).
+- Contato (inclusive com um formulário para envio de propostas diretamente por e-mail).
 
 # Cada card tem uma funcionalidade que ao ser clicado redirecionado para uma página:
 
--Página de certificados
+- Página de certificados
 
--Experiência Profissional
+- Experiência Profissional
 
--Download para currículo
+- Download para currículo
 
--Resumo acadêmico.
+- Resumo acadêmico.
 
 🛠️Tecnologias utilizadas:
 - TypeScript/JavaScript
