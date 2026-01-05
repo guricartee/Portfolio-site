@@ -52,17 +52,16 @@ const certificados = [
 
       <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6" id="certGrid">
         {certificados.map((cert) => (
-          /* Card: Forçado fundo branco sempre */
+        
           <div class="cert-card bg-white dark:bg-white rounded-lg shadow-md overflow-hidden flex flex-col transition-transform hover:scale-105">
             <div class="aspect-video bg-gray-200">
                <img src={cert.image} alt={cert.title} class="w-full h-full object-cover" />
             </div>
             <div class="p-4 flex-grow flex flex-col justify-center text-center">
-              /* Forçando cor do título do certificado */
+              
               <h3 class="text-sm font-semibold !text-gray-800 leading-tight mb-1">
                 {cert.title}
               </h3>
-              /* Forçando cor da plataforma (itálico) */
               <p class="text-xs !text-gray-600 italic">({cert.platform})</p>
             </div>
           </div>
