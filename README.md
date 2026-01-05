@@ -11,7 +11,8 @@ Perfil acadêmico
 
 Contato (inclusive com um formulário para envio de propostas diretamente por e-mail).
 
-Cada card tem uma funcionalidade que ao ser clicado redirecionado para uma página:
+# Cada card tem uma funcionalidade que ao ser clicado redirecionado para uma página:
+
 Página de certificados
 
 Experiência Profissional
@@ -32,7 +33,7 @@ Destaques: Responsividade completa, garantindo uma experiência ideal em todas a
 
 
 
-#Portfólio #DesenvolvimentoWeb #TypeScript#TailwindCSS#Sistemas
+#Portfólio#DesenvolvimentoWeb#TypeScript#TailwindCSS#Sistemas
 
 
        
