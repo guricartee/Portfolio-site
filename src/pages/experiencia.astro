@@ -6,43 +6,43 @@ const metadata = {
   title: 'Experiência | Gustavo Ricarte',
 };
 
-// Dados da sua experiência baseados na imagem
 const experiencia = {
   title: 'Hubcount Business Intelligence',
   period: 'Setembro 2025 - Até o momento',
   role: 'Função: Jovem Aprendiz Infraestrutura',
-  image: '/images/hub.png', // Certifique-se de salvar a imagem neste caminho
+  image: '/images/hub.png',
   description: `A Hubcount é uma plataforma de Business Intelligence (BI) e automação voltada para a transformação digital do setor contábil e financeiro. A solução se destaca por integrar dados de diversos ERPs para gerar dashboards dinâmicos, permitindo uma análise profunda de indicadores de desempenho e saúde financeira. Sou o responsável pela infraestrutura de TI e suporte ao usuário, garantindo a continuidade operacional através do atendimento ágil de chamados técnicos em hardware, software e sistemas. Atuei no ciclo completo de onboarding tecnológico, realizando a preparação, configuração e entrega de equipamentos para novos colaboradores conforme os padrões corporativos. Utilizei ferramentas como Monday e Google Drive para a gestão estratégica de inventário e controle de ativos, além de contribuir para a padronização de processos internos e documentação técnica, visando a melhoria contínua do atendimento.`
 };
 ---
 
 <Layout metadata={metadata}>
-  <section class="bg-[#E5E4D7] min-h-screen py-12 px-4 sm:px-6 lg:px-8">
+  <section class="bg-[#E5E4D7] dark:bg-[#E5E4D7] min-h-screen py-12 px-4 sm:px-6 lg:px-8 transition-colors">
     <div class="max-w-4xl mx-auto">
       
       <div class="mb-8">
-        <a href="/" class="flex items-center text-gray-700 hover:text-black transition-colors mb-4">
+        <a href="/" class="flex items-center !text-gray-700 hover:!text-black transition-colors mb-4">
           <Icon name="tabler:arrow-left" class="w-6 h-6 mr-2" />
+          <span>Voltar</span>
         </a>
-        <h1 class="text-3xl font-bold border-b-2 border-black inline-block pb-1">Experiência</h1>
+        <h1 class="text-3xl font-bold border-b-2 !border-black inline-block pb-1 !text-gray-900">Experiência</h1>
       </div>
 
       <div class="flex justify-center mt-12">
-        <div class="max-w-md w-full border border-gray-400 rounded-lg overflow-hidden shadow-sm bg-[#E5E4D7]">
+        <div class="max-w-md w-full border !border-gray-400 rounded-lg overflow-hidden shadow-sm bg-[#E5E4D7] dark:bg-[#E5E4D7]">
           <div class="w-full">
             <img 
               src={experiencia.image} 
               alt={experiencia.title} 
-              class="w-full h-auto object-cover border-b border-gray-400"
+              class="w-full h-auto object-cover border-b !border-gray-400"
             />
           </div>
 
           <div class="p-6 text-center">
-            <h2 class="text-xl font-bold text-gray-900 mb-1">{experiencia.title}</h2>
-            <p class="text-sm text-gray-700">{experiencia.period}</p>
-            <p class="text-sm font-medium text-gray-800 mb-4">{experiencia.role}</p>
+            <h2 class="text-xl font-bold !text-gray-900 mb-1">{experiencia.title}</h2>
+            <p class="text-sm !text-gray-700">{experiencia.period}</p>
+            <p class="text-sm font-medium !text-gray-800 mb-4">{experiencia.role}</p>
             
-            <p class="text-sm text-gray-800 text-justify leading-relaxed">
+            <p class="text-sm !text-gray-800 text-justify leading-relaxed">
               {experiencia.description}
             </p>
           </div>
