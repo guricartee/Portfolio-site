@@ -21,7 +21,7 @@ Um portfólio é mais do que um simples site: é a sua identidade profissional, 
 
 - Resumo acadêmico.
 
-🛠️Tecnologias utilizadas:
+# 🛠️Tecnologias utilizadas:
 - TypeScript/JavaScript
 
 - HTML5
