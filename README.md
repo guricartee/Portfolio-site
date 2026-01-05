@@ -22,10 +22,13 @@ Um portfólio é mais do que um simples site: é a sua identidade profissional, 
 -Resumo acadêmico.
 
 🛠️Tecnologias utilizadas:
--TypeScript/JavaScript
--HTML5
--Tailwind CSS
--CSS Nativo
+- TypeScript/JavaScript
+
+- HTML5
+
+- Tailwind CSS
+  
+- CSS Nativo
 
 Destaques: Responsividade completa, garantindo uma experiência ideal em todas as telas (desktop, mobile e mais!).
 
