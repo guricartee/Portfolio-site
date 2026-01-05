@@ -23,26 +23,25 @@ const projects = [
 
 <Layout metadata={metadata}>
   <Hero actions={[]} image={null}>
-  <div class="min-h-screen flex items-center">
-    <div class="grid grid-cols-1 md:grid-cols-2 items-center gap-16 max-w-7xl mx-auto px-6 w-full">
-      
-      <!-- TEXTO (ESQUERDA) -->
-      <div>
-        <span class="text-4xl font-light tracking-widest text-gray-500 block mb-6">
-          Olá, meu nome é:
-        </span>
+  <div class="min-h-screen flex items-center bg-white dark:bg-[#050a18] font-['Inter',_sans-serif] transition-colors duration-300">
+  <div class="grid grid-cols-1 md:grid-cols-2 items-center gap-16 max-w-7xl mx-auto px-6 w-full">
+    
+    <div>
+      <span class="text-3xl md:text-4xl font-light tracking-widest text-gray-400 dark:text-gray-500 block mb-6">
+        Olá, meu nome é:
+      </span>
 
-        <h1 class="text-6xl font-bold text-[#800020] mb-6">
-          Gustavo Ricarte
-        </h1>
+      <h1 class="text-5xl md:text-7xl font-bold text-[#800020] dark:text-red-500 mb-6 transition-colors">
+        Gustavo Ricarte
+      </h1>
 
-        <p class="text-xl text-gray-600 mb-10 max-w-xl">
-          Estudante de Análise e Desenvolvimento de Sistemas na
-          <span class="font-semibold text-[#800020]">
-            Universidade São Judas Tadeu
-          </span>.
-          Focado em Desenvolvimento Back-End Java e Python, Infraestrutura & Banco de dados SQL.
-        </p>
+      <p class="text-xl text-gray-600 dark:text-gray-300 mb-10 max-w-xl leading-relaxed">
+        Estudante de Análise e Desenvolvimento de Sistemas na
+        <span class="font-semibold text-[#800020] dark:text-red-400">
+          Universidade São Judas Tadeu
+        </span>.
+        Focado em Desenvolvimento Back-End Java e Python, Infraestrutura & Banco de dados SQL.
+      </p>
 
         <a
           href="#contato"
