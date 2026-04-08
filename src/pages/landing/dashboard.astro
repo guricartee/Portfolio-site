@@ -1,0 +1,42 @@
+---
+import Layout from '~/layouts/PageLayout.astro';
+import { Icon } from 'astro-icon/components';
+---
+
+<Layout>
+  {/* Adicionado dark:bg-[#E5E4D7] para o fundo não mudar */}
+  <section class="bg-[#E5E4D7] dark:bg-[#E5E4D7] min-h-screen py-12 px-6 transition-colors">
+    <div class="max-w-6xl mx-auto">
+      {/* Forçando a cor do ícone de voltar */}
+      <a href="/" class="inline-block mb-8 !text-black hover:scale-110 transition-transform">
+        <Icon name="tabler:arrow-left" class="w-8 h-8" />
+      </a>
+
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
+        <div>
+          {/* Título: Forçado para cinza quase preto */}
+          <h1 class="text-4xl font-bold mb-6 !text-gray-900">Presença por QR-Code</h1>
+          
+          {/* Descrição: Alterado de text-gray-400 para !text-gray-800 (mais escuro e legível) */}
+          <p class="!text-black-800 text-sm leading-relaxed text-justify mb-8">
+            O futebol é movido pela paixão, mas consolidado por números. Este projeto de visualização de dados foi desenvolvido para transformar o vasto histórico do Campeonato Brasileiro de pontos corridos (2003 a 2024) em um painel interativo e inteligente. O objetivo principal foi simular um ambiente de análise avançada (Sports Analytics) capaz de identificar padrões históricos, avaliar o desempenho de longo prazo dos clubes e projetar tendências estruturais para as temporadas de 2025 e 2026.Para resolver isso, desenvolvi um dashboard no Looker Studio focado em escaneabilidade e usabilidade, dividindo as informações em blocos lógicos:Apresentação imediata do volume da base de dados, processando mais de 17.570 partidas disputadas e 22.514 gols marcados ao longo da história. Tabelas dinâmicas que ranqueiam o desempenho histórico, destacando a pontuação total e o poderio ofensivo (Gols por Time), evidenciando o domínio de equipes como São Paulo e Flamengo no topo das métricas. Gráficos de linhas e colunas que mapeiam a "temperatura" do campeonato ano a ano. O usuário pode filtrar e isolar a trajetória de um time específico ou observar a curva de gols por temporada, notando a evolução tática desde as médias altíssimas de 2003 até os cenários de maior equilíbrio tático recentes.
+
+          {/* Ícones de Tecnologia: Adicionado cores específicas */}
+          <div class="flex gap-6 mb-10">
+            
+            <Icon name="tabler:database" class="w-10 h-10 text-blue-900" title="SQL" />
+          </div>
+
+          <a href="https://github.com/guricartee/sistema-presenca-qrcode-java" target="_blank" class="inline-block">
+            <Icon name="tabler:brand-github" class="w-12 h-12 !text-black hover:scale-110 transition-transform" />
+          </a>
+        </div>
+
+        <div class="space-y-6">
+          <img src="/images/dashboard-brasileirao.png" class="rounded-xl shadow-lg border border-gray-400 w-full" alt="Screenshot 1" />
+          
+        </div>
+      </div>
+    </div>
+  </section>
+</Layout>
