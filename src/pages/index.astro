@@ -23,10 +23,10 @@ const projects = [
     description: 'Este projeto consiste em um dashboard interativo de visualização de dados focado no histórico do Campeonato Brasileiro de pontos corridos. O painel consolida estatísticas oficiais de 2003 a 2024, estruturando as informações com o objetivo de simular análises e tendências para o ano de 2026.',
     image: '/images/dashboard-brasileirao.png',
     link: '/dashboard'
-  }
+  },
   {
     title: 'Dashboard Campeonato Brasileiro',
-    description: ' Este projeto consiste em um dashboard interativo de visualização de dados focado no histórico do Campeonato Brasileiro de pontos corridos. O painel consolida estatísticas oficiais de 2003 a 2024, estruturando as informações com o objetivo de simular análises e tendências para o ano de 2026. Através desta ferramenta, é possível extrair insights valiosos sobre o domínio das equipes e a evolução do futebol nacional ao longo de mais de duas décadas.
+    description: ' Este projeto consiste em um dashboard interativo de visualização de dados focado no histórico do Campeonato Brasileiro de pontos corridos. O painel consolida estatísticas oficiais de 2003 a 2024, estruturando as informações com o objetivo de simular análises e tendências para o ano de 2026. Através desta ferramenta, é possível extrair insights valiosos sobre o domínio das equipes e a evolução do futebol nacional ao longo de mais de duas décadas.'
     image: '/images/dashboardbrasileiro.png',
     link: '/dashboardbrasileiro'
   }
@@ -109,6 +109,7 @@ const projects = [
 </Fragment>
 </Content>
   <Features2
+    id="meus-cards"
     items={[
       { title: 'Currículo',  description: `Meu currículo profissional, no qual apresento meus conhecimentos adquiridos ao longo da minha trajetória, minhas formações acadêmicas e certificações relevantes, além das experiências profissionais que me permitiram desenvolver habilidades práticas. Também destaco as áreas de interesse dentro da tecnologia nas quais busco me especializar e expandir meus conhecimentos.`, callToAction: { text: 'Baixar CV', href: '/currículo-GustavoRicarte1.docx', target: '_blank',download: 'Currículo_Gustavo_Ricarte.docx',variant: 'primary' } },
       { title: 'Certificados', description: `Neste quadro, apresento todos os certificados que conquistei ao longo dos meus anos de estudo, adquiridos em plataformas renomadas como Cisco, Fundação Bradesco, Universidade São Judas, entre outras. Cada certificação reflete o meu compromisso contínuo com o aprendizado e o aprimoramento das minhas habilidades na área de tecnologia. Além disso, compartilho o conhecimento que venho adquirindo aplicando o que aprendi para gerar impacto positivo no setor.`, callToAction: { text: 'Certificados', href: '/certificados', variant: 'primary' } },
@@ -170,10 +171,32 @@ const projects = [
   </section>
 
   <style is:global>
+
   /* Força a cor do título principal em "Contato" */
   #contato h2 {
     color: #111827 !important; /* Cor text-gray-900 */
     opacity: 1 !important;
+  }
+
+  /* --- FORÇA AS CORES DOS CARDS (Features2) --- */
+  
+  /* Cores no modo claro (Light Mode) */
+  #meus-cards h3 {
+    color: #111827 !important; /* Tailwind text-gray-900 */
+  }
+  
+  #meus-cards p {
+    color: #374151 !important; /* Tailwind text-gray-700 */
+    line-height: 1.625 !important; /* Equivalente ao leading-relaxed */
+  }
+
+  /* Cores no modo escuro (Dark Mode) */
+  .dark #meus-cards h3 {
+    color: #ffffff !important; /* Tailwind text-white */
+  }
+  
+  .dark #meus-cards p {
+    color: #d1d5db !important; /* Tailwind text-gray-300 */
   }
   </style>
 
