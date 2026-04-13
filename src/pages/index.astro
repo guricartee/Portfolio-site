@@ -23,13 +23,8 @@ const projects = [
     description: 'Este projeto consiste em um dashboard interativo de visualização de dados focado no histórico do Campeonato Brasileiro de pontos corridos. O painel consolida estatísticas oficiais de 2003 a 2024, estruturando as informações com o objetivo de simular análises e tendências para o ano de 2026.',
     image: '/images/dashboard-brasileirao.png',
     link: '/dashboard'
-  },
-  {
-    title: 'Dashboard Campeonato Brasileiro',
-    description: ' Este projeto consiste em um dashboard interativo de visualização de dados focado no histórico do Campeonato Brasileiro de pontos corridos. O painel consolida estatísticas oficiais de 2003 a 2024, estruturando as informações com o objetivo de simular análises e tendências para o ano de 2026. Através desta ferramenta, é possível extrair insights valiosos sobre o domínio das equipes e a evolução do futebol nacional ao longo de mais de duas décadas.',
-    image: '/images/dashboardbrasileiro.png',
-    link: '/dashboardbrasileiro'
   }
+  
 ];
 ---
 
@@ -170,35 +165,39 @@ const projects = [
     </div>
   </section>
 
-  <style is:global>
-
+ <style is:global>
   /* Força a cor do título principal em "Contato" */
   #contato h2 {
-    color: #111827 !important; /* Cor text-gray-900 */
+    color: #111827 !important;
     opacity: 1 !important;
   }
 
   /* --- FORÇA AS CORES DOS CARDS (Features2) --- */
   
-  /* Cores no modo claro (Light Mode) */
+  /* Pega títulos */
   #meus-cards h3 {
-    color: #111827 !important; /* Tailwind text-gray-900 */
+    color: #111827 !important; 
   }
   
-  #meus-cards p {
-    color: #374151 !important; /* Tailwind text-gray-700 */
-    line-height: 1.625 !important; /* Equivalente ao leading-relaxed */
+  /* Pega as descrições, independente se é <p>, <div>, ou tem a classe .text-muted do AstroWind */
+  #meus-cards p,
+  #meus-cards .text-muted,
+  #meus-cards div[class*="text-"] {
+    color: #111827 !important; /* Coloquei um cinza quase preto pra você ter certeza que mudou! */
+    line-height: 1.625 !important; 
   }
 
   /* Cores no modo escuro (Dark Mode) */
   .dark #meus-cards h3 {
-    color: #ffffff !important; /* Tailwind text-white */
+    color: #ffffff !important;
   }
   
-  .dark #meus-cards p {
-    color: #d1d5db !important; /* Tailwind text-gray-300 */
+  .dark #meus-cards p,
+  .dark #meus-cards .text-muted,
+  .dark #meus-cards div[class*="text-"] {
+    color: #d1d5db !important; 
   }
-  </style>
+</style>
 
   <Content id="contato" title="Contato" isReversed>
   <Fragment slot="image">
