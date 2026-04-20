@@ -149,8 +149,8 @@ const projects = [
       </div>
       <div class="grid grid-cols-1 md:grid-cols-3 gap-10" id="projectGrid">
         {projects.map((proj) => (
-          <div class="project-card group transition-transform hover:-translate-y-2">
-            <a href={proj.link}>
+          <div class="project-card  transition-transform hover:-translate-y-2">
+            <a href={proj.link} class="group block">
               <div class="bg-[#2a2a2a] rounded-xl overflow-hidden border border-gray-800 group-hover:border-[#800020] shadow-2xl">
                 <img src={proj.image} alt={proj.title} class="w-full aspect-video object-cover" />
                 <div class="p-8">
