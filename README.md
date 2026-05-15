@@ -19,7 +19,6 @@ Um portfólio é mais do que um simples site: é a sua identidade profissional, 
 
 - Download para currículo
 
-- Resumo acadêmico.
 
 # 🛠️Tecnologias utilizadas:
 - TypeScript/JavaScript
@@ -36,7 +35,7 @@ Destaques: Responsividade completa, garantindo uma experiência ideal em todas a
 
 
 
-#Portfólio#DesenvolvimentoWeb#TypeScript#TailwindCSS#Sistemas
+
 
 
        
