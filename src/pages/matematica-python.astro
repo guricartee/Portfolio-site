@@ -1,0 +1,41 @@
+---
+import Layout from '~/layouts/PageLayout.astro';
+import { Icon } from 'astro-icon/components';
+---
+
+<Layout>
+  {/* Adicionado dark:bg-[#E5E4D7] para o fundo não mudar */}
+  <section class="bg-[#E5E4D7] dark:bg-[#E5E4D7] min-h-screen py-12 px-6 transition-colors">
+    <div class="max-w-6xl mx-auto">
+      {/* Forçando a cor do ícone de voltar */}
+      <a href="/" class="inline-block mb-8 !text-black hover:scale-110 transition-transform">
+        <Icon name="tabler:arrow-left" class="w-8 h-8" />
+      </a>
+
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
+        <div>
+          {/* Título: Forçado para cinza quase preto */}
+          <h1 class="text-4xl font-bold mb-6 !text-gray-900">Matemática Computacional com Python </h1>
+          
+          {/* Descrição: Alterado de text-gray-400 para !text-gray-800 (mais escuro e legível) */}
+          <p class="!text-black text-base leading-relaxed text-justify mb-8">
+             Este projeto reúne conceitos de matemática computacional, programação em Python e visualização de dados através de gráficos, aplicados na resolução de aproximadamente 15 problemas envolvendo diferentes áreas da engenharia. O objetivo do projeto é demonstrar, na prática, como a programação pode ser utilizada para modelar, calcular e representar problemas matemáticos e físicos presentes em áreas como Engenharia Civil, Mecânica, Elétrica, Produção e Computação. Foram utilizados recursos como funções matemáticas, cálculos algébricos, trigonometria, análise de dados e geração de gráficos com bibliotecas Python, proporcionando uma abordagem visual e interativa para a interpretação dos resultados.
+          </p> {/* Ícones de Tecnologia: Adicionado cores específicas */}
+          <div class="flex gap-6 mb-10">
+            <Icon name="tabler:chart-bar" class="w-10 h-10 text-green-700" title="Dashboard" />
+            <Icon name="tabler:database" class="w-10 h-10 text-blue-900" title="SQL" />
+          </div>
+
+          <a href="https://github.com/guricartee/matematica-com-python" target="_blank" class="inline-block">
+            <Icon name="tabler:brand-github" class="w-12 h-12 !text-black hover:scale-110 transition-transform" />
+          </a>
+        </div>
+
+        <div class="flex justify-center gap-6 flex-wrap">
+          <img src="/images/dashboard-rh.png" class="rounded-xl shadow-lg border border-gray-400" style="width: 420x;" alt="Screenshot 1" />
+          <img src="/images/dashboard-rh2.png" class="rounded-xl shadow-lg border border-gray-400"  style="width: 420px;" alt="Screenshot 1" />
+        </div>
+      </div>
+    </div>
+  </section>
+</Layout>
